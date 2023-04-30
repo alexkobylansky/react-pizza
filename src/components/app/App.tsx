@@ -17,7 +17,7 @@ export const App = () => {
             </div>
             <div className="header__cart">
               <a href="/cart.html" className="button button--cart">
-                <span>520 ₽</span>
+                <span>520 ₴</span>
                 <div className="button__delimiter"></div>
                 <svg
                   width="18"
@@ -113,7 +113,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -151,7 +151,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -189,7 +189,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -227,7 +227,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -265,7 +265,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -303,7 +303,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -341,7 +341,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -379,7 +379,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
@@ -417,7 +417,7 @@ export const App = () => {
                   </ul>
                 </div>
                 <div className="pizza-block__bottom">
-                  <div className="pizza-block__price">от 395 ₽</div>
+                  <div className="pizza-block__price">от 395 ₴</div>
                   <div className="button button--outline button--add">
                     <svg
                       width="12"
