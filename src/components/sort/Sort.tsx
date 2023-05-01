@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export const Sort: React.FC = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  const [sortListIndex, setSortListIndex] = useState<number>(0);
+
+  const sortList = ['популярности', 'цене', 'алфавиту'];
+
+  const handleSetSort = (index: number): void => {
+    setSortListIndex(index);
+    setOpenPopup(false);
+  };
+
+  const selectedSort = sortList[sortListIndex];
+
   return (
     <div className="sort">
       <div className="sort__label">
         <svg
+          style={openPopup ? {transform: "rotate(-180deg)", transition: "transform .2s linear"} : {transform: "rotate(0)", transition: "transform .2s linear"}}
           width="10"
           height="6"
           viewBox="0 0 10 6"
@@ -17,15 +30,17 @@ export const Sort: React.FC = () => {
           />
         </svg>
         <b>Сортировка по:</b>
-        <span>популярности</span>
+        <span onClick={() => setOpenPopup(!openPopup)}>{selectedSort}</span>
       </div>
-      <div className="sort__popup">
+      {openPopup && <div className="sort__popup">
         <ul>
-          <li className="active">популярности</li>
-          <li>цене</li>
-          <li>алфавиту</li>
+          {sortList.map((title, index) => <li key={title}
+                                              className={sortListIndex === index ? "active" : ""}
+                                              onClick={() => handleSetSort(index)}
+          >{title}</li>)
+          }
         </ul>
-      </div>
+      </div>}
     </div>
   );
 }
