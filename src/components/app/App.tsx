@@ -4,12 +4,14 @@ import {Header} from "../header/Header";
 import {Categories} from "../categories/Categories";
 import {Sort} from "../sort/Sort";
 import {PizzaBlock} from "../pizza-block/PizzaBlock";
+import {PizzaBlockSkeleton} from "../pizza-block/PizzaBlockSkeleton";
 
 const url: string | undefined = process.env.REACT_APP_BASE_URL;
 
 export const App: React.FC = () => {
   const firstInit = useRef(false);
   const [pizzas, setPizzas] = useState<IPizza[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getPizzas = async (): Promise<void> => {
     try {
@@ -24,6 +26,8 @@ export const App: React.FC = () => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -33,6 +37,9 @@ export const App: React.FC = () => {
     }
     firstInit.current = true;
   }, []);
+
+  const skeleton = isLoading ? [...new Array(8)].map((_, index) => <PizzaBlockSkeleton key={index}/>) : null;
+  const content = !!pizzas.length ? pizzas.map(pizza => <PizzaBlock key={pizza.name} {...pizza}/>) : null;
 
   return (
     <div className="App">
@@ -46,7 +53,8 @@ export const App: React.FC = () => {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-              {pizzas && pizzas.map(pizza => <PizzaBlock key={pizza.name} {...pizza}/>)}
+              {skeleton}
+              {content}
             </div>
           </div>
         </div>
